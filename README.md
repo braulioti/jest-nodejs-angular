@@ -2,6 +2,24 @@
 
 [![Twitter: @braulio_info](https://img.shields.io/badge/contact-@braulio_info-blue.svg?style=flat)](https://twitter.com/braulio_info)
 
+## Configure database
+
+
+
+## Configure database
+
+- Create a sample database in PostgreSQL
+- Run `script/version_1.0.0.sql` script file into database
+
+## Running Backend
+
+- Open `<project_folder>/src/node` folder
+- Do an `npm install` for installing all the project dependencies
+- Do an `npm install -g nodemon` for installing all the project dependencies
+- Do an `npm install -g tsc` for installing all the project dependencies
+- Run `tsc -w` for generate Javascript files
+- Run `nodemon dist/` 
+
 ## Changelog
 
 ## Author

@@ -7,7 +7,7 @@ gen/*
 # ======
 # NodeJS
 # ======
-src/node_modules/*
-src/dist/*
-src/package-lock.json
+src/node/node_modules/*
+src/node/dist/*
+src/node/package-lock.json
 
