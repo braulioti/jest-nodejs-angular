@@ -1,20 +1,22 @@
-import {HttpClient, HttpEvent, HttpResponse} from '@angular/common/http';
+import {HttpResponse} from '@angular/common/http';
 import {Injectable} from '@angular/core';
 import {User} from './user.model';
 import {Observable} from 'rxjs';
 import {createRequestOption} from '../shared/model/request-util';
 import 'rxjs/add/operator/map';
 import {BaseHttp} from '../shared/base/base-http';
+import {BaseService} from '../shared/base/base.service';
 
 export type EntityResponseType = HttpResponse<User>;
 export type EntityResponseTypeArray = HttpResponse<User[]>;
 
 @Injectable()
-export class UserService {
+export class UserService extends BaseService {
 
   private resourceUrl = 'http://localhost:3000/user';
 
-  constructor(private http: BaseHttp) {
+  constructor(public http: BaseHttp) {
+    super(http);
   }
 
   create(user: User): Observable<HttpResponse<User>> {

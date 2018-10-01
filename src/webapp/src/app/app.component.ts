@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {User} from './user.model';
 import {UserService} from './user.service';
+import {UserMock} from './user.mock';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +16,7 @@ export class AppComponent {
     public userService: UserService
   ) {
     this.user = new User();
+    //this.userService.setMock(new UserMock());
     this.loadList();
   }
 

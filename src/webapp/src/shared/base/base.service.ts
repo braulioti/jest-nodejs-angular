@@ -13,7 +13,7 @@ export class BaseService {
 
   setMock(value: any) {
     this.mock = value;
-    // this.http.setMock(this.mock);
+    this.http.setMock(this.mock);
   }
 
   getMock(): any {

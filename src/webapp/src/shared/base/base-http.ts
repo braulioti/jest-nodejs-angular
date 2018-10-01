@@ -2,15 +2,20 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpHandler} from '@angular/common/http';
 
 import {Observable} from 'rxjs';
+import {BaseMock} from './base.mock';
 
 @Injectable()
 export class BaseHttp extends HttpClient {
-  private mock: any;
+  private mock: BaseMock;
 
   constructor(
     private httpHandler: HttpHandler
   ) {
     super(httpHandler);
+  }
+
+  setMock(value: BaseMock) {
+    this.mock = value;
   }
 
   public delete<T>(url: string, options?: any): Observable<T> {
@@ -59,7 +64,9 @@ export class BaseHttp extends HttpClient {
         return super.get<T>(url, options)
       });
     } else {
-      return null;
+      return this.callRequest<T>(() => {
+        return null;
+      });
     }
   }
 
