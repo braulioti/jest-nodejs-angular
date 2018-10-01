@@ -7,22 +7,27 @@
 - Typescript < 2.9.2
 - PostgreSQL < 8.0.0
 - Node < 8.11.4
+- Angular CLI < 5.6.0
 
 ## Configure database
 
 - Create a sample database in PostgreSQL
-- Run `script/version_1.0.0.sql` script file into database
+- Run `<project_folder>/script/version_1.0.0.sql` script file into database
+- Configure `<project_folder>/src/node/common/environments.ts` file
 
 ## Running Backend
 
 - Open `<project_folder>/src/node` folder
 - Do an `npm install` for installing all the project dependencies
 - Do an `npm install -g nodemon` for installing all the project dependencies
-- Do an `npm install -g tsc` for installing all the project dependencies
+- Do an `npm install -g tsc` for installing latest Typescript version
 - Run `tsc -w` for generate Javascript files
 - Run `nodemon dist/` 
 
-## Changelog
+## Execute Angular Application
+
+- Open `<project_folder>/src/webapp` folder
+- Do an `npm install -g @angular/cli` for installing latest Angular version
 
 ## Author
 - Email: braulio@braulioti.com.br
