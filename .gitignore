@@ -1,0 +1,13 @@
+# =========
+# IDE Files
+# =========
+.idea
+gen/*
+
+# ======
+# NodeJS
+# ======
+src/node_modules/*
+src/dist/*
+src/package-lock.json
+
