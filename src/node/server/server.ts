@@ -44,7 +44,7 @@ export class Server {
                     version: '1.0.0'
                 };
 
-                this.application = restify.createServer({});
+                this.application = restify.createServer(options);
 
                 const corsOptions: corsMiddleware.Options = {
                     preflightMaxAge: 10,

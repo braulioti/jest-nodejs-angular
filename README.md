@@ -2,9 +2,11 @@
 
 [![Twitter: @braulio_info](https://img.shields.io/badge/contact-@braulio_info-blue.svg?style=flat)](https://twitter.com/braulio_info)
 
-## Configure database
+## Requirements
 
-
+- Typescript < 2.9.2
+- PostgreSQL < 8.0.0
+- Node < 8.11.4
 
 ## Configure database
 
