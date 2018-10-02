@@ -1,5 +1,5 @@
 <form name="editForm" role="form" novalidate (ngSubmit)="save()">
-  <label for="name">Name</label>
+  <label for="name">Name</label> &nbsp;&nbsp;&nbsp;
   <input type="text" class="form-control" id="name" name="name" [(ngModel)]="user.name" />
 
   <br /><br />
@@ -13,6 +13,10 @@
   <br /><br />
 
   <ul>
-    <li *ngFor="let user of listUser">{{ user.name }}</li>
+    <li *ngFor="let user of listUser">
+      <a (click)="loadItem(user)">{{ user.id }} - {{ user.name }}</a>
+      &nbsp;&nbsp;&nbsp;
+      <a (click)="remove(user)">(Remove)</a>
+    </li>
   </ul>
 </form>
