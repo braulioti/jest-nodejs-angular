@@ -46,7 +46,7 @@ export class BaseMock {
 
   delete(item: any): any {
     let aux = null;
-    let pos = null;
+    let pos = -1;
 
     this.itemsMock.forEach((p, index) => {
       if (p.id === item) {
@@ -55,7 +55,7 @@ export class BaseMock {
       }
     });
 
-    if (pos) {
+    if (pos > -1) {
       this.itemsMock.splice(pos, 1);
     }
 
